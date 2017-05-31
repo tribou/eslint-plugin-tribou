@@ -12,9 +12,9 @@ git-awareness, vim-usability, and React and ES6 best practices.
 
 ```bash
 yarn add --dev \
-    eslint-plugin-tribou@^3.0.0 \
-    babel-eslint@^7.1.0 \
-    eslint@^3.9.1
+    eslint-plugin-tribou \
+    babel-eslint \
+    eslint
 ```
 
 Then add the following to your `.eslintrc`:
@@ -72,4 +72,15 @@ Or in your `.eslintrc.yml`:
 settings:
   flowtype:
     onlyFilesWithFlowAnnotation: true
+```
+
+#### Legacy Configuration
+
+In order to apply the rules equivalent to `eslint-config-tribou@^3.0.0`, install v0.2.0 instead:
+
+```bash
+yarn add --dev \
+    eslint-plugin-tribou@^0.2.0 \
+    babel-eslint@^7.2.3 \
+    eslint@^3.19.0
 ```
