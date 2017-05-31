@@ -11,18 +11,10 @@ git-awareness, vim-usability, and React and ES6 best practices.
 #### Quick Start
 
 ```bash
-npm install --save-dev \
+yarn add --dev \
     eslint-plugin-tribou@^3.0.0 \
     babel-eslint@^7.1.0 \
-    eslint@^3.9.1 \
-    eslint-config-airbnb@^13.0.0 \
-    eslint-config-standard@^6.2.1 \
-    eslint-plugin-flowtype@^2.25.0 \
-    eslint-plugin-import@^2.1.0 \
-    eslint-plugin-jsx-a11y@^2.2.3 \
-    eslint-plugin-promise@^3.3.1 \
-    eslint-plugin-react@^6.6.0 \
-    eslint-plugin-standard@^2.0.1
+    eslint@^3.9.1
 ```
 
 Then add the following to your `.eslintrc`:
@@ -30,6 +22,9 @@ Then add the following to your `.eslintrc`:
 ```json
 {
   "extends": [
+    "plugin:tribou/recommended"
+  ],
+  "plugins": [
     "tribou"
   ]
 }
@@ -39,6 +34,9 @@ Or add an `.eslintrc.yml`:
 
 ```yml
 extends:
+  - plugin:tribou/recommended
+
+plugins:
   - tribou
 
 # Wow, that was easier... 😉
@@ -57,9 +55,7 @@ linting on files that **do** have the `// @flow` annotation). To disable this
 
 ```json
 {
-  "extends": [
-    "tribou"
-  ],
+  ...
   "settings": {
     "flowtype": {
       "onlyFilesWithFlowAnnotation": true
@@ -71,8 +67,7 @@ linting on files that **do** have the `// @flow` annotation). To disable this
 Or in your `.eslintrc.yml`:
 
 ```yml
-extends:
-  - tribou
+...
 
 settings:
   flowtype:
