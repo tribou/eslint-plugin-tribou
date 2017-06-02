@@ -42,20 +42,35 @@
     "eslint-plugin-flowtype": "^2.34.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.0.1",
     "eslint-plugin-standard": "^3.0.1"
   },
   "devDependencies": {
+    "babel-jest": "^20.0.3",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.0.0",
+    "jest": "^20.0.4",
     "nodemon": "^1.11.0"
   },
   "peerDependencies": {
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0"
   },
+  "jest": {
+    "verbose": true,
+    "testRegex": "/(test)/.*_test\\.js$",
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
   "scripts": {
-    "lint": "eslint --cache --ignore-path .gitignore index.js",
-    "test": "eslint --config index.js test",
+    "lint": "eslint --ignore-path .gitignore index.js test",
+    "lint-cache": "eslint --cache --ignore-path .gitignore index.js",
+    "test": "npm run --silent lint && npm run --silent test-jest",
+    "test-jest": "cross-env NODE_ENV=test jest --coverage",
     "watch-test": "nodemon -x npm test",
     "yarn": "npm run --silent yarn-bin -- install --ignore-scripts",
     "yarn-bin": "node bin/yarn-${npm_package_engines_yarn}.js"

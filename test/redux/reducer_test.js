@@ -1,24 +1,12 @@
 // @flow
+import cli from '../'
+
+const text = `// @flow
 const INIT_LOAD = 'test/init/LOAD'
 const INIT_LOAD_SUCCESS = 'test/init/LOAD_SUCCESS'
 
 
-export type InitState = {
-  isLoading: boolean,
-  loaded: boolean,
-}
-
-type InitAction = {
-  type: string,
-}
-
-// just for this test
-export type GlobalReducerState = {
-  init: InitState,
-}
-
-
-export const initialState: InitState = {
+export const initialState: Object = {
   isLoading: true,
   loaded: false,
   me: '1',
@@ -63,8 +51,9 @@ export const initialState: InitState = {
 }
 
 
-function reducer (state: ?InitState = initialState, action: InitAction)
-  : ?InitState {
+function reducer (
+  state: ?Object = initialState, action: Object
+): ?Object {
 
   switch (action.type) {
 
@@ -109,3 +98,13 @@ export function loadComplete (): InitAction {
 
 
 export default reducer
+`
+
+it('reducer', () => {
+
+  const results = cli.executeOnText(text)
+    .results[0].messages
+
+  expect(results).toEqual([])
+
+})

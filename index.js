@@ -1,30 +1,32 @@
 'use strict'
 
-var ESLint = require('eslint')
-var Merge = require('deepmerge')
-var AirbnbConfig = require('eslint-config-airbnb')
-var StandardConfig = require('eslint-config-standard')
-var StandardPlugin = require('eslint-plugin-standard')
-var FlowtypePlugin = require('eslint-plugin-flowtype')
-var ImportPlugin = require('eslint-plugin-import')
-var JsxA11yPlugin = require('eslint-plugin-jsx-a11y')
-var PromisePlugin = require('eslint-plugin-promise')
-var ReactPlugin = require('eslint-plugin-react')
+const ESLint = require('eslint')
+const Merge = require('deepmerge')
+const AirbnbConfig = require('eslint-config-airbnb')
+const StandardConfig = require('eslint-config-standard')
+const StandardPlugin = require('eslint-plugin-standard')
+const FlowtypePlugin = require('eslint-plugin-flowtype')
+const ImportPlugin = require('eslint-plugin-import')
+const JsxA11yPlugin = require('eslint-plugin-jsx-a11y')
+const PromisePlugin = require('eslint-plugin-promise')
+const ReactPlugin = require('eslint-plugin-react')
 
-var merged = Merge.all([
-  StandardPlugin.rules,
-  FlowtypePlugin.rules,
-  ImportPlugin.rules,
-  JsxA11yPlugin.rules,
-  PromisePlugin.rules,
-  ReactPlugin.rules,
+const merged = Merge.all([
+  StandardPlugin,
+  FlowtypePlugin,
+  ImportPlugin,
+  JsxA11yPlugin,
+  PromisePlugin,
+  ReactPlugin,
 ])
 
 module.exports = {
 
   eslint: ESLint,
 
-  rules: merged,
+  rules: merged.rules,
+  rulesConfig: merged.rulesConfig,
+  deprecatedRules: merged.deprecatedRules,
 
   configs: {
     airbnb: AirbnbConfig,
@@ -87,7 +89,7 @@ module.exports = {
 
       env: {
         jest: true,
-      }
+      },
 
     },
   },
