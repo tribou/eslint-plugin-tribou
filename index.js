@@ -48,6 +48,10 @@ module.exports = {
 
       rules: {
 
+        'import/extensions': [2, {
+          js: 'never',
+          jsx: 'never',
+        }],
         'import/no-extraneous-dependencies': ['error', {
           devDependencies: true,
         }],
@@ -55,9 +59,6 @@ module.exports = {
         'no-duplicate-imports': 0, // handled by import/no-duplicates
 
         'quote-props': ['error', 'as-needed', { numbers: true }],
-
-        'react/jsx-filename-extension': [0],
-        'react/require-extension': [0],
 
         strict: 0,
         'arrow-body-style': [2, 'always'],

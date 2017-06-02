@@ -52,8 +52,12 @@
     "babel-preset-env": "^1.5.1",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.0.0",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "react": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0"
   },
   "peerDependencies": {
     "babel-eslint": "^7.2.3",
@@ -62,6 +66,9 @@
   "jest": {
     "verbose": true,
     "testRegex": "/(test)/.*_test\\.js$",
+    "moduleNameMapper": {
+      "\\.(css)$": "identity-obj-proxy"
+    },
     "moduleDirectories": [
       "node_modules"
     ]
