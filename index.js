@@ -60,6 +60,9 @@ module.exports = {
 
         'quote-props': ['error', 'as-needed', { numbers: true }],
 
+        'react/jsx-filename-extension': [0],
+        'react/require-extension': [0],
+
         strict: 0,
         'arrow-body-style': [2, 'always'],
         'arrow-parens': [2, 'always'],
