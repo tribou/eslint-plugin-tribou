@@ -35,8 +35,8 @@ module.exports = {
     recommended: {
 
       extends: [
-        'eslint-config-airbnb',
-        'eslint-config-standard',
+        'airbnb',
+        'standard',
         'plugin:flowtype/recommended',
       ],
 
@@ -48,13 +48,13 @@ module.exports = {
 
       rules: {
 
-        'arrow-body-style': [2, 'as-needed'],
-        'arrow-parens': [2, 'as-needed'],
+        'arrow-body-style': ['error', 'as-needed'],
+        'arrow-parens': ['error', 'as-needed'],
 
-        'brace-style': [2, 'stroustrup'],
-        'comma-dangle': [2, 'always-multiline'],
+        'brace-style': ['error', 'stroustrup'],
+        'comma-dangle': ['error', 'always-multiline'],
 
-        'import/extensions': [2, {
+        'import/extensions': ['error', {
           js: 'never',
           jsx: 'never',
         }],
@@ -70,20 +70,20 @@ module.exports = {
         'react/require-extension': [0],
 
         strict: 0,
-        'max-len': [2, {
+        'max-len': ['error', {
           code: 80,
           tabWidth: 2,
           ignoreStrings: true,
           ignoreTemplateLiterals: true,
           ignoreUrls: true,
         }],
-        'operator-linebreak': [2, 'before'],
-        'no-multiple-empty-lines': [2, {
+        'operator-linebreak': ['error', 'before'],
+        'no-multiple-empty-lines': ['error', {
           max: 2,
           maxEOF: 0,
         }],
         'no-underscore-dangle': [0],
-        'padded-blocks': [2, 'always'],
+        'padded-blocks': ['error', 'always'],
 
       },
 
