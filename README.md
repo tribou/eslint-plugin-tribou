@@ -10,6 +10,10 @@ git-awareness, vim-usability, and React and ES6 best practices.
 
 #### Quick Start
 
+NOTE: If you're migrating from `eslint-config-tribou` and want to maintain
+compatibility, see the [Legacy
+Configuration](https://github.com/tribou/eslint-plugin-tribou#legacy-configuration).
+
 ```bash
 yarn add --dev \
     eslint-plugin-tribou \
@@ -53,7 +57,7 @@ this config can still enforce all of its other standards (including Flow
 linting on files that **do** have the `// @flow` annotation). To disable this
 "universal" Flow typing requirement in your `.eslintrc`:
 
-```json
+```js
 {
   ...
   "settings": {
@@ -68,7 +72,6 @@ Or in your `.eslintrc.yml`:
 
 ```yml
 ...
-
 settings:
   flowtype:
     onlyFilesWithFlowAnnotation: true
