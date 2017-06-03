@@ -48,6 +48,12 @@ module.exports = {
 
       rules: {
 
+        'arrow-body-style': [2, 'as-needed'],
+        'arrow-parens': [2, 'as-needed'],
+
+        'brace-style': [2, 'stroustrup'],
+        'comma-dangle': [2, 'always-multiline'],
+
         'import/extensions': [2, {
           js: 'never',
           jsx: 'never',
@@ -64,10 +70,6 @@ module.exports = {
         'react/require-extension': [0],
 
         strict: 0,
-        'arrow-body-style': [2, 'always'],
-        'arrow-parens': [2, 'always'],
-        'brace-style': [2, 'stroustrup'],
-        'comma-dangle': [2, 'always-multiline'],
         'max-len': [2, {
           code: 80,
           tabWidth: 2,

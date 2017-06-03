@@ -6,18 +6,14 @@ import React from 'react'
 
 const css = {}
 
-const Home = (props: Object): React$Element<any> => {
-
-  return (
-    <div className={\`\${css.home} pt7 tc\`}>
-      This is the app...
+const Home = (props: Object): React$Element<any> => (
+  <div className={\`\${css.home} pt7 tc\`}>
+    This is the app...
     <ul>
       <li>This is a test item</li>
     </ul>
-    </div>
-  )
-
-}
+  </div>
+)
 
 
 export default Home
