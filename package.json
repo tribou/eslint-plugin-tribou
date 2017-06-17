@@ -4,8 +4,8 @@
   "description": "Start with JS Standard Style but push towards better readability, git-awareness, vim-usability, and React and ES6 best practices",
   "main": "index.js",
   "engines": {
-    "node": ">=6.4.x <7",
-    "npm": ">=4.5.x <5",
+    "node": ">=6",
+    "npm": ">=4.5.x",
     "yarn": "0.24.6"
   },
   "repository": {
