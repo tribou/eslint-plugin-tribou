@@ -4,9 +4,8 @@
   "description": "Start with JS Standard Style but push towards better readability, git-awareness, vim-usability, and React and ES6 best practices",
   "main": "index.js",
   "engines": {
-    "node": ">=6.4.x <7",
-    "npm": ">=4.5.x <5",
-    "yarn": "0.24.6"
+    "node": ">=6",
+    "npm": ">=4.5.x"
   },
   "repository": {
     "type": "git",
@@ -80,6 +79,7 @@
     "test-jest": "cross-env NODE_ENV=test jest --coverage",
     "watch-test": "nodemon -x npm test",
     "yarn": "npm run --silent yarn-bin -- install --ignore-scripts",
-    "yarn-bin": "node bin/yarn-${npm_package_engines_yarn}.js"
-  }
+    "yarn-bin": "node bin/yarn-${npm_package_yarn}.js"
+  },
+  "yarn": "0.24.6"
 }
