@@ -2,13 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
-## [2.0.5] - 2017-07-16
+## [1.1.0] - 2017-07-16
 ### Changed
 - Removed `react/prefer-stateless-function` restriction
 - Added warning when using `React.Component` to suggest `React.PureComponent`
   with Flow covariant instructions.
 ### Maintenance
 - Dependency upgrades.
+- CircleCI auto-versioning script.
 
 ## [0.2.5] - 2017-07-13
 ### Fixed
@@ -42,7 +43,6 @@ All notable changes to this project will be documented in this file.
 - `arrow-parens`: Relaxed rules to use `'as-needed'` which allows omitting
   parenthesis if only one argument.
 
-[1.0.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v0.2.0...v1.0.0
 
 
 ## [0.2.0] - 2017-05-31
@@ -50,4 +50,12 @@ All notable changes to this project will be documented in this file.
 - Added existing `eslint-config-tribou@^3.1.0` rules to provide a
   backwards-compatible migration path coming from that project.
 
+[1.1.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.5...v1.1.0
+[1.0.5]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.4...v1.0.5
+[1.0.4]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.3...v1.0.4
+[1.0.3]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.2...v1.0.3
+[1.0.2]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.1...v1.0.2
+[1.0.1]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.0...v1.0.1
+[1.0.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v0.2.0...v1.0.0
+[0.2.5]: https://github.com/tribou/eslint-plugin-tribou/compare/v0.2.4...v0.2.5
 [0.2.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v0.1.0...v0.2.0
