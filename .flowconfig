@@ -28,4 +28,4 @@ module.file_ext=.web.js
 
 
 [version]
-^0.47.0
+^0.50.0

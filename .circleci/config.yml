@@ -29,7 +29,7 @@ jobs:
           command: npm run flow-ci
       - run:
           name: test-jest
-          command: npm run test-jest
+          command: npm run test-jest -- --runInBand
 
   build-node-8:
     working_directory: ~/app
@@ -60,25 +60,7 @@ jobs:
           command: npm run flow-ci
       - run:
           name: test-jest
-          command: npm run test-jest
-
-  # The following wasn't working:
-  #
-  # Failed with error:
-  # https://circleci.com/gh/tribou/react-template/82
-  #
-  #
-  # lint:
-  #   steps:
-  #     - run: npm run lint
-
-  # flow:
-  #   steps:
-  #     - run: npm run flow-ci
-
-  # jest:
-  #   steps:
-  #     - run: npm run test-jest
+          command: npm run test-jest -- --runInBand
 
 workflows:
   version: 2

@@ -4,7 +4,7 @@ const CLIEngine = require('eslint').CLIEngine
 
 const cli = new CLIEngine({
   configFile: 'eslint-config.js',
-  useEslintrc: true,
+  useEslintrc: false,
   parser: 'babel-eslint',
 })
 
