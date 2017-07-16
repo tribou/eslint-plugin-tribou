@@ -68,6 +68,23 @@ module.exports = {
 
         'react/jsx-filename-extension': [0],
         'react/require-extension': [0],
+        'react/prefer-stateless-function': [
+          0,
+          { ignorePureComponents: true },
+        ],
+        // Since there's currently no way for eslint to enforce
+        // React.PureComponent and detect when a component should _not_ be a
+        // PureComponent, we will warn whenever using React.Component for now.
+        // https://github.com/yannickcr/eslint-plugin-react/issues/971#issuecomment-262733418
+        // 'no-restricted-syntax': [2, {
+        //   object: 'React',
+        //   property: 'Component',
+        //   message: 'Please consider using PureComponent instead, and use Flow covariant modifiers to enforce immutable Objects and Arrays. See https://goo.gl/zgqmH2 for examples.',
+        // }],
+        'no-restricted-syntax': [1, {
+          selector: 'ImportDeclaration[source.value="react"] > ImportSpecifier[imported.name="Component"]',
+          message: 'Please consider using PureComponent instead with Flow covariant modifiers to enforce immutable Objects and Arrays. See https://goo.gl/zgqmH2 for examples.',
+        }],
 
         strict: 0,
         'max-len': ['error', {

@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-tribou",
-  "version": "1.0.5",
+  "version": "1.1.0-0",
   "description": "Start with JS Standard Style but push towards better readability, git-awareness, vim-usability, and React and ES6 best practices",
   "main": "index.js",
   "engines": {
@@ -42,20 +42,24 @@
     "eslint-plugin-node": "^5.0.0",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^7.1.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
+    "concurrently": "^3.5.0",
     "cross-env": "^5.0.1",
     "eslint": "^3.19.0",
-    "flow-bin": "^0.47.0",
-    "husky": "^0.13.4",
+    "flow-bin": "^0.50.0",
+    "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
     "nodemon": "^1.11.0",
+    "nsp": "^2.6.3",
     "react": "^15.6.1",
     "react-redux": "^5.0.5",
     "redux": "^3.7.0"
@@ -75,13 +79,14 @@
     ]
   },
   "scripts": {
-    "prepush": "npm run --silent flow && npm test",
+    "prepush": "npm test",
     "flow": "flow; test $? -eq 0 -o $? -eq 2",
     "flow-ci": "flow check .",
     "lint": "eslint --ignore-path .gitignore index.js test",
     "lint-cache": "eslint --cache --ignore-path .gitignore index.js",
-    "test": "npm run --silent lint && npm run --silent test-jest",
+    "test": "concurrently -n 'LINT,FLOW,NSP' -p '[{name}]' 'npm run --silent lint' 'npm run --silent flow-ci' 'npm run --silent test-nsp' && npm run --silent test-jest",
     "test-jest": "cross-env NODE_ENV=test jest --coverage",
+    "test-nsp": "nsp check",
     "watch-test": "nodemon -x npm test",
     "yarn": "npm run --silent yarn-bin -- install --ignore-scripts",
     "yarn-bin": "node bin/yarn-${npm_package_yarn}.js"
