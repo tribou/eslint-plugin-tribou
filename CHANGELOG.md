@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0] - 2017-08-20
+### Added
+- Add support for eslint v4
+### Maintenance
+- Dependency upgrades.
+
 ## [1.1.0] - 2017-07-16
 ### Changed
 - Removed `react/prefer-stateless-function` restriction
@@ -43,13 +49,12 @@ All notable changes to this project will be documented in this file.
 - `arrow-parens`: Relaxed rules to use `'as-needed'` which allows omitting
   parenthesis if only one argument.
 
-
-
 ## [0.2.0] - 2017-05-31
 ### Added
 - Added existing `eslint-config-tribou@^3.1.0` rules to provide a
   backwards-compatible migration path coming from that project.
 
+[1.2.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.5...v1.1.0
 [1.0.5]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.4...v1.0.5
 [1.0.4]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.3...v1.0.4
