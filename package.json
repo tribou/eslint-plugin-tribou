@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-tribou",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Start with JS Standard Style but push towards better readability, git-awareness, vim-usability, and React and ES6 best practices",
   "main": "index.js",
   "engines": {
@@ -91,5 +91,5 @@
     "yarn": "npm run --silent yarn-bin -- install",
     "yarn-bin": "node bin/yarn-${npm_package_yarn}.js"
   },
-  "yarn": "1.0.1"
+  "yarn": "1.0.2"
 }
