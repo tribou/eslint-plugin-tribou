@@ -88,7 +88,7 @@
     "test-jest": "cross-env NODE_ENV=test jest --coverage",
     "test-nsp": "nsp check",
     "watch-test": "cross-env NODE_ENV=test jest --watch --notify",
-    "yarn": "npm run --silent yarn-bin -- install --ignore-scripts",
+    "yarn": "npm run --silent yarn-bin -- install",
     "yarn-bin": "node bin/yarn-${npm_package_yarn}.js"
   },
   "yarn": "1.0.1"
