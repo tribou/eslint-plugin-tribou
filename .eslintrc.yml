@@ -1,6 +1,2 @@
 extends:
   - ./eslint-config.js
-
-settings:
-  flowtype:
-    onlyFilesWithFlowAnnotation: true

@@ -1,0 +1,10 @@
+{
+  "name": "test",
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "eslint": "^4.7.0",
+    "eslint-plugin-tribou": "^1.2.2",
+    "react": "^15.6.1",
+    "react-redux": "^5.0.6"
+  }
+}
