@@ -91,5 +91,5 @@
     "yarn": "npm run --silent yarn-bin -- install",
     "yarn-bin": "node bin/yarn-${npm_package_yarn}.js"
   },
-  "yarn": "1.0.2"
+  "yarn": "1.1.0"
 }
