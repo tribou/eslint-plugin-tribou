@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/tribou/eslint-plugin-tribou.svg?branch=master)](https://travis-ci.org/tribou/eslint-plugin-tribou)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 [![bitHound Code](https://www.bithound.io/github/tribou/eslint-plugin-tribou/badges/code.svg)](https://www.bithound.io/github/tribou/eslint-plugin-tribou)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Ftribou%2Feslint-plugin-tribou.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Ftribou%2Feslint-plugin-tribou?ref=badge_shield)
 
 Start with JS Standard Style but push towards better readability,
 git-awareness, vim-usability, and React and ES6 best practices.
@@ -87,3 +88,7 @@ yarn add --dev \
     babel-eslint@^7.2.3 \
     eslint@^3.19.0
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Ftribou%2Feslint-plugin-tribou.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Ftribou%2Feslint-plugin-tribou?ref=badge_large)
