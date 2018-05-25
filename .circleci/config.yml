@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:
+  test-node-6:
     working_directory: ~/app
     docker:
       - image: circleci/node:6
@@ -13,12 +13,12 @@ jobs:
           name: node-version
           command: node -v
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node6-{{ arch }}-{{ checksum "yarn.lock" }}
       - run:
           name: yarn
           command: npm run yarn
       - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node6-{{ arch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
       - run:
@@ -31,7 +31,7 @@ jobs:
           name: test-jest
           command: npm run test-jest -- --runInBand
 
-  build-node-8:
+  test-node-8:
     working_directory: ~/app
     docker:
       - image: circleci/node:8
@@ -44,12 +44,43 @@ jobs:
           name: node-version
           command: node -v
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node8-{{ arch }}-{{ checksum "yarn.lock" }}
       - run:
           name: yarn
           command: npm run yarn
       - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: yarn-cache-node8-{{ arch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - run:
+          name: lint
+          command: npm run lint
+      - run:
+          name: flow-ci
+          command: npm run flow-ci
+      - run:
+          name: test-jest
+          command: npm run test-jest -- --runInBand
+
+  test-node-10:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run:
+          name: which-node
+          command: which node
+      - run:
+          name: node-version
+          command: node -v
+      - restore_cache:
+          key: yarn-cache-node10-{{ arch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: yarn
+          command: npm run yarn
+      - save_cache:
+          key: yarn-cache-node10-{{ arch }}-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
       - run:
@@ -80,14 +111,16 @@ jobs:
 
 workflows:
   version: 2
-  build_and_test:
+  run-tests-and-release:
     jobs:
-      - build
-      - build-node-8
+      - test-node-6
+      - test-node-8
+      - test-node-10
       - bump-version:
           filters:
             branches:
               only: master
           requires:
-            - build
-            - build-node-8
+            - test-node-6
+            - test-node-8
+            - test-node-10
