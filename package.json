@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-tribou",
-  "version": "0.2.5",
+  "version": "0.3.0-0",
   "description": "Start with JS Standard Style but push towards better readability, git-awareness, vim-usability, and React and ES6 best practices",
   "main": "index.js",
   "engines": {
@@ -32,10 +32,14 @@
     "url": "https://github.com/tribou/eslint-plugin-tribou/issues"
   },
   "homepage": "https://github.com/tribou/eslint-plugin-tribou#readme",
+  "files": [
+    "index.js",
+    "yarn.lock"
+  ],
   "dependencies": {
-    "babel-eslint": "^7.2.3",
-    "deepmerge": "^1.3.2",
-    "eslint": "^3.19.0",
+    "babel-eslint": "^8.2.3",
+    "deepmerge": "^2.1.0",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^15.0.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-flowtype": "^2.34.0",
@@ -47,16 +51,16 @@
     "eslint-plugin-standard": "^3.0.1"
   },
   "devDependencies": {
-    "babel-jest": "^20.0.3",
+    "babel-jest": "^23.0.0",
     "babel-preset-env": "^1.5.1",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.0.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^20.0.4",
+    "jest": "^23.0.0",
     "nodemon": "^1.11.0",
-    "react": "^15.5.4",
+    "react": "^16.4.0",
     "react-redux": "^5.0.5",
-    "redux": "^3.6.0"
+    "redux": "^4.0.0"
   },
   "peerDependencies": {
     "babel-eslint": "^7.2.3",
@@ -78,8 +82,7 @@
     "test": "npm run --silent lint && npm run --silent test-jest",
     "test-jest": "cross-env NODE_ENV=test jest --coverage",
     "watch-test": "nodemon -x npm test",
-    "yarn": "npm run --silent yarn-bin -- install --ignore-scripts",
-    "yarn-bin": "node bin/yarn-${npm_package_yarn}.js"
-  },
-  "yarn": "0.24.6"
+    "yarn": "npm run --silent yarn-bin -- install --prefer-offline",
+    "yarn-bin": "node bin/yarn-1.7.0.js"
+  }
 }
