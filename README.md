@@ -3,19 +3,18 @@
 [![npm version](https://badge.fury.io/js/eslint-plugin-tribou.svg)](https://badge.fury.io/js/eslint-plugin-tribou)
 [![Build Status](https://travis-ci.org/tribou/eslint-plugin-tribou.svg?branch=master)](https://travis-ci.org/tribou/eslint-plugin-tribou)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![bitHound Code](https://www.bithound.io/github/tribou/eslint-plugin-tribou/badges/code.svg)](https://www.bithound.io/github/tribou/eslint-plugin-tribou)
 
 Start with JS Standard Style but push towards better readability,
 git-awareness, vim-usability, and React and ES6 best practices.
 
-#### Quick Start
+## Quick Start
 
 NOTE: If you're migrating from `eslint-config-tribou` and want to maintain
 compatibility, see the [Legacy
 Configuration](https://github.com/tribou/eslint-plugin-tribou#legacy-configuration).
 
 ```bash
-yarn add --dev \
+npm install --save-dev \
     eslint-plugin-tribou \
     babel-eslint \
     eslint
@@ -45,6 +44,8 @@ plugins:
 
 # Wow, that was easier... 😉
 ```
+
+### Flow
 
 By default, Flow typing is required for an entire project since
 `eslint-plugin-flowtype` will require the `\\ @flow` annotation to be set at
@@ -77,12 +78,35 @@ settings:
     onlyFilesWithFlowAnnotation: true
 ```
 
-#### Legacy Configuration
+## Prettier Usage
+
+Like using [`prettier`](https://prettier.io/)?
+
+Install [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier):
+
+```
+npm install --save-dev eslint-config-prettier
+```
+
+And add the configs to your `.eslintrc.yml`:
+
+```yml
+extends:
+  - plugin:tribou/recommended
+  - prettier
+  - prettier/flowtype
+  - prettier/react
+
+plugins:
+  - tribou
+```
+
+## Legacy Configuration
 
 In order to apply the rules equivalent to `eslint-config-tribou@^3.0.0`, install v0.2.0 instead:
 
 ```bash
-yarn add --dev \
+npm install --save-dev \
     eslint-plugin-tribou@^0.2.0 \
     babel-eslint@^7.2.3 \
     eslint@^3.19.0
