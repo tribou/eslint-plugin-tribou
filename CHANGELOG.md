@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2018-05-25
+### Maintenance
+- BREAKING: Major dependency upgrades
+- Fixed affected tests which included changes to `prefer-destructuring` and
+  `function-paren-newline`
+
 ## [1.3.2] - 2018-05-25
 ### Maintenance
 - Non-major dependency upgrades
@@ -68,6 +74,7 @@ All notable changes to this project will be documented in this file.
 - Added existing `eslint-config-tribou@^3.1.0` rules to provide a
   backwards-compatible migration path coming from that project.
 
+[2.0.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.3.2...v2.0.0
 [1.3.2]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.3.0...v1.3.2
 [1.3.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.1.0...v1.2.0
