@@ -1,7 +1,7 @@
 # eslint-plugin-tribou
 
 [![npm version](https://badge.fury.io/js/eslint-plugin-tribou.svg)](https://badge.fury.io/js/eslint-plugin-tribou)
-[![Build Status](https://travis-ci.org/tribou/eslint-plugin-tribou.svg?branch=master)](https://travis-ci.org/tribou/eslint-plugin-tribou)
+[![CircleCI](https://img.shields.io/circleci/project/github/tribou/eslint-plugin-tribou.svg)](https://circleci.com/gh/tribou/eslint-plugin-tribou)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 Start with JS Standard Style but push towards better readability,
@@ -80,9 +80,11 @@ settings:
 
 ## Prettier Usage
 
-Like using [`prettier`](https://prettier.io/)?
+Like using [`prettier`](https://prettier.io/)? You can ignore rules that affect
+`prettier` styles with
+[`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier)
 
-Install [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier):
+Install:
 
 ```
 npm install --save-dev eslint-config-prettier
@@ -103,7 +105,8 @@ plugins:
 
 ## Legacy Configuration
 
-In order to apply the rules equivalent to `eslint-config-tribou@^3.0.0`, install v0.2.0 instead:
+In order to apply the rules equivalent to `eslint-config-tribou@^3.0.0`,
+install v0.2.0 instead:
 
 ```bash
 npm install --save-dev \
