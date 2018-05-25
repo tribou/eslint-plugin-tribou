@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-tribou",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Start with JS Standard Style but push towards better readability, git-awareness, vim-usability, and React and ES6 best practices",
   "main": "index.js",
   "engines": {
