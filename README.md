@@ -106,11 +106,11 @@ plugins:
 ## Legacy Configuration
 
 In order to apply the rules equivalent to `eslint-config-tribou@^3.0.0`,
-install v0.2.0 instead:
+install v0.3.0 instead:
 
 ```bash
 npm install --save-dev \
-    eslint-plugin-tribou@^0.2.0 \
-    babel-eslint@^7.2.3 \
-    eslint@^3.19.0
+    eslint-plugin-tribou@^0.3.0 \
+    babel-eslint@^8.0.0 \
+    eslint@^4.0.0
 ```
