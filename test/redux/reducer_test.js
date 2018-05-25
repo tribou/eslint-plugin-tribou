@@ -52,7 +52,8 @@ export const initialState: Object = {
 
 
 function reducer (
-  state: ?Object = initialState, action: Object
+  state: ?Object = initialState,
+  action: Object
 ): ?Object {
 
   switch (action.type) {
