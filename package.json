@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/tribou/eslint-plugin-tribou#readme",
   "dependencies": {
-    "deepmerge": "^1.5.1",
+    "deepmerge": "^2.1.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-flowtype": "^2.34.0",
@@ -47,22 +47,22 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.0.0",
-    "babel-jest": "^21.0.2",
+    "babel-jest": "^23.0.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^3.5.0",
     "cross-env": "^5.0.5",
     "eslint": "^4.5.0",
-    "flow-bin": "^0.56.0",
+    "flow-bin": "^0.73.0",
     "husky": "^0.14.3",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^21.1.0",
+    "jest": "^23.0.0",
     "nodemon": "^1.11.0",
-    "nsp": "^2.7.0",
-    "react": "^15.6.1",
+    "nsp": "^3.2.1",
+    "react": "^16.4.0",
     "react-redux": "^5.0.6",
-    "redux": "^3.7.0"
+    "redux": "^4.0.0"
   },
   "peerDependencies": {
     "babel-eslint": ">=7.2.3 <9.0.0",
