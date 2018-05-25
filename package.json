@@ -78,8 +78,7 @@
     "test": "npm run --silent lint && npm run --silent test-jest",
     "test-jest": "cross-env NODE_ENV=test jest --coverage",
     "watch-test": "nodemon -x npm test",
-    "yarn": "npm run --silent yarn-bin -- install --ignore-scripts",
-    "yarn-bin": "node bin/yarn-${npm_package_yarn}.js"
-  },
-  "yarn": "0.24.6"
+    "yarn": "npm run --silent yarn-bin -- install --prefer-offline",
+    "yarn-bin": "node bin/yarn-1.7.0.js"
+  }
 }
