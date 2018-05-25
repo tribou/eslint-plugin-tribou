@@ -11,9 +11,9 @@ const Home = (props: Object): React$Element<any> => {
   return (
     <div className={\`\${css.home} pt7 tc\`}>
       This is the app...
-    <ul>
-      <li>This is a test item</li>
-    </ul>
+      <ul>
+        <li>This is a test item</li>
+      </ul>
     </div>
   )
 
