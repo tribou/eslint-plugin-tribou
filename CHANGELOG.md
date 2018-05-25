@@ -25,10 +25,6 @@ All notable changes to this project will be documented in this file.
 - Dependency upgrades.
 - CircleCI auto-versioning script.
 
-## [0.2.5] - 2017-07-13
-### Fixed
-- Remove yarn `package.engine` restriction.
-
 ## [1.0.5] - 2017-06-22
 ### Fixed
 - Remove yarn `package.engine` restriction.
@@ -57,7 +53,17 @@ All notable changes to this project will be documented in this file.
 - `arrow-parens`: Relaxed rules to use `'as-needed'` which allows omitting
   parenthesis if only one argument.
 
-## [0.2.0] - 2017-05-31
+## [0.3.0] - 2018-05-25 (Legacy config)
+### Fixed
+- BREAKING change via JSX indentation bug in one of the minor/patch deps from v0.2.5. JSX indentation should be correct now especially if using eslint v4.
+### Added
+- Add support for eslint v4
+
+## [0.2.5] - 2017-07-13 (Legacy config)
+### Fixed
+- Remove yarn `package.engine` restriction.
+
+## [0.2.0] - 2017-05-31 (Legacy config)
 ### Added
 - Added existing `eslint-config-tribou@^3.1.0` rules to provide a
   backwards-compatible migration path coming from that project.
@@ -72,5 +78,6 @@ All notable changes to this project will be documented in this file.
 [1.0.2]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v0.2.0...v1.0.0
+[0.3.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v0.2.5...v0.3.0
 [0.2.5]: https://github.com/tribou/eslint-plugin-tribou/compare/v0.2.4...v0.2.5
 [0.2.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v0.1.0...v0.2.0
