@@ -1,5 +1,5 @@
 // @flow
-const CLIEngine = require('eslint').CLIEngine
+const { CLIEngine } = require('eslint')
 
 
 const cli = new CLIEngine({
