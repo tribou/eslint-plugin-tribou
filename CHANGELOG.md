@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.2] - 2018-05-25
+### Maintenance
+- Non-major dependency upgrades
+
+## [1.3.0] - 2017-10-02
+### Maintenance
+- Non-major dependency upgrades
+
 ## [1.2.0] - 2017-08-20
 ### Added
 - Add support for eslint v4
@@ -54,6 +62,8 @@ All notable changes to this project will be documented in this file.
 - Added existing `eslint-config-tribou@^3.1.0` rules to provide a
   backwards-compatible migration path coming from that project.
 
+[1.3.2]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.3.0...v1.3.2
+[1.3.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.5...v1.1.0
 [1.0.5]: https://github.com/tribou/eslint-plugin-tribou/compare/v1.0.4...v1.0.5
