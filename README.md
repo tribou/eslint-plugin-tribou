@@ -3,7 +3,6 @@
 [![npm version](https://badge.fury.io/js/eslint-plugin-tribou.svg)](https://badge.fury.io/js/eslint-plugin-tribou)
 [![Build Status](https://travis-ci.org/tribou/eslint-plugin-tribou.svg?branch=master)](https://travis-ci.org/tribou/eslint-plugin-tribou)
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![bitHound Code](https://www.bithound.io/github/tribou/eslint-plugin-tribou/badges/code.svg)](https://www.bithound.io/github/tribou/eslint-plugin-tribou)
 
 Start with JS Standard Style but push towards better readability,
 git-awareness, vim-usability, and React and ES6 best practices.
@@ -76,11 +75,11 @@ settings:
 
 #### Legacy Configuration
 
-In order to apply the rules equivalent to `eslint-config-tribou@^3.0.0`, install v0.2.0 instead:
+In order to apply the rules equivalent to `eslint-config-tribou@^3.0.0`, install v0.3.0 instead:
 
 ```bash
 yarn add --dev \
-    eslint-plugin-tribou@^0.2.0 \
-    babel-eslint@^7.2.3 \
-    eslint@^3.19.0
+    eslint-plugin-tribou@^0.3.0 \
+    babel-eslint@^8.0.0 \
+    eslint@^4.0.0
 ```
