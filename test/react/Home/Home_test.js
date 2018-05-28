@@ -3,6 +3,8 @@ import cli from '../../'
 
 const text = `// @flow
 import React from 'react'
+// eslint-disable-next-line import/no-unresolved
+import { Link } from 'react-router'
 
 const css = {}
 
@@ -12,6 +14,7 @@ const Home = (props: Object): React$Element<any> => (
     <ul>
       <li>This is a test item</li>
     </ul>
+    <Link to="/somewhere">A Link</Link>
   </div>
 )
 

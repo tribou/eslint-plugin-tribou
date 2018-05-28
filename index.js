@@ -102,6 +102,14 @@ module.exports = {
         'no-underscore-dangle': [0],
         'padded-blocks': ['error', 'always'],
 
+        // Included in https://github.com/airbnb/javascript/pull/1648 which
+        // will land in the next major release for eslint-config-airbnb
+        'jsx-a11y/anchor-is-valid': ['error', {
+          components: ['Link'],
+          specialLink: ['to'],
+          aspects: ['noHref', 'invalidHref', 'preferButton'],
+        }],
+
       },
 
       settings: {
